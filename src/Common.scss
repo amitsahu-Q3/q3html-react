@@ -1,0 +1,46 @@
+@use 'assets/css/comon.scss' as *;
+@use 'assets/css/color.scss' as *;
+@use 'assets/css/elevation.scss' as *;
+@use 'assets/css/border.scss' as *;
+@use 'assets/css/font.scss' as *;
+@use 'assets/css/spacing.scss' as *;
+
+
+.container-full{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+}
+.left-menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 220px;
+   height: 100%;
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+.page-view{
+    width: calc(100% - 220px);
+    padding-left: 250px;
+}
+.left-menu ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.left-menu ul li{
+    padding: 0;
+}
+.left-menu ul li a{
+    padding: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    display: block;
+}
+.left-menu ul li a:hover{
+    background-color: #000;
+    color: #FFF;
+}

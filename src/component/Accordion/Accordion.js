@@ -2,6 +2,7 @@ import './accordion.scss';
 import './accordion-layout.scss';
 import React, { useState } from 'react';
 
+
 function Accordion() {
     const [state, setState] = useState(false);
     const changeState = () => {

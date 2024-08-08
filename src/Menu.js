@@ -20,8 +20,12 @@ import Switch from './component/Switch/Switch.js';
 import Radio from './component/Radio/Radio.js';
 import Loader from './component/Loader/Loader.js';
 import Accordion from './component/Accordion/Accordion.js';
+import Header from "./component/Common/Sidebar.js";
 
-const routes = (
+
+const Menu = (
+  <BrowserRouter>
+  <Header></Header>
   <Routes>
       <Route exact path="/color" component={Colors} />
       <Route exact path="/avatar" component={Avatar} />
@@ -44,6 +48,7 @@ const routes = (
       <Route exact path="/loader" component={Loader} />
       <Route exact path="/accordion" component={Accordion} />
   </Routes>
+  </BrowserRouter>
 )
 
-export default routes
+export default Menu;
