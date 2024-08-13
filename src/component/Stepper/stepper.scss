@@ -1,0 +1,167 @@
+@use '../../assets/css/color.scss' as *;
+@use '../../assets/css/font.scss' as *;
+@use '../../assets/css/spacing.scss' as *;
+@use '../../assets/css/border.scss' as *;
+
+
+
+.steps-outer{
+  display: flex;
+  max-width: 288px;
+  .step-bx{
+    font-size:$Font-Size-12;
+    line-height: $Line-height-18;
+    color: #171D25;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column-reverse;
+    position: relative;
+    span{
+      border: 1px solid #D9D9D9;
+      width: 24px;
+      height: 24px;
+      border-radius:$Radius-24 ;
+      margin-top: 4px;
+    }
+  }
+}
+.step-bx::after{
+  content: " ";
+  position: absolute;
+  right: 6px;
+  width: 37%;
+  height: 4px;
+  border-bottom: 4px dotted rgba(0, 0, 0, 0.1);
+}
+.step-bx:last-child:after{
+  content: inherit;
+}
+.step-bx.step-inprogress span{
+  position: relative;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.step-bx.step-inprogress span::after{
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #06B217;
+  border-radius: $Radius-24;
+  content: " ";
+  position: absolute;
+  left: auto;
+  right: auto;
+}
+.step-bx.step-completed span{
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.steps-w-solid-line .step-bx::after{
+  border-bottom-style: solid;
+  bottom: 11px;
+}
+
+.steps-w-solid-line .step-bx.step-completed::after{
+  border-color: #06B217;
+}
+
+.steps-outer.steps-inline .step-bx{
+  flex-direction:row-reverse;
+  min-width: 110px;
+  align-items: center;
+  justify-content: flex-end;
+}
+.steps-outer.steps-inline .step-bx span{
+  margin-top: 0;
+  margin-left:$Spacing-8;
+}
+.steps-outer.steps-inline .step-bx:after{
+  width: 22%;
+  bottom: 10px;
+  right: 10px;
+}
+
+.steps-w-solid-line.steps-round .step-bx.step-completed::after{
+  border-color: #D9D9D9;
+
+}
+.steps-w-solid-line.steps-round .step-bx:after{
+  border-width: 2px;
+}
+
+.steps-round.steps-outer .step-bx span{
+  text-align: center;
+  line-height: 24px;
+}
+
+.steps-round.steps-outer .step-bx.step-completed{
+  background-color:#D1ECFF;
+}
+
+.steps-outer.steps-round-selectd .step-bx::after{
+  right: -22px;
+  width: 20px;
+  height: 1px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.steps-outer.steps-round-selectd .step-bx{
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  padding: 2px 4px;
+}
+
+.steps-round.steps-outer.steps-round-selectd .step-bx.step-completed{
+  border-radius: $Radius-24;
+}
+.steps-round.steps-outer.steps-round-selectd{
+  justify-content: space-between;
+}
+.steps-outer.steps-round-selectd .step-bx .step-text{
+  margin-top: 0;
+}
+
+.steps-outer.steps-round-selectd .step-bx .step-name{
+  padding-right: 6px;
+}
+.steps-card-bx {
+  max-width: fit-content;
+}
+.steps-card-bx .step-bx{
+  flex-direction: column;
+    align-items: center;
+    padding:8px 28px;
+    border: $Border-width-1 $Border-Style-Solid #D9D9D9;
+    border-radius: $Radius-8;
+    margin-right: $Spacing-16;
+    background-color: #F1F1F1;
+}
+
+.steps-card-bx .step-bx.step-completed{
+border-color: #06B217;
+background-color:#ECFDF3;
+margin-right: $Spacing-32;
+}
+.steps-card-bx .step-bx.step-completed::after{
+  border-bottom-color: #06B217 !important;
+}
+.steps-card-bx .step-bx.step-inprogress{
+  background-color: #FFF;
+}
+
+.steps-outer.steps-card-bx .step-bx::after{
+  right: -40px;
+  width: 40px;
+  height: 1px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.steps-card-bx .step-bx .step-count{
+  margin-bottom: 4px;
+}

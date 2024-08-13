@@ -1,34 +1,145 @@
 import './accordion.scss';
 import './accordion-layout.scss';
+import AccordionArrow from '../../assets/images/angle-small-down.svg';
+import HomeIcon from '../../assets/images/home.svg';
 import React, { useState } from 'react';
 
 
-function Accordion() {
-    const [state, setState] = useState(false);
-    const changeState = () => {
-        setState(!state);
-    }
+const AccordionItem = ({ title, children, isOpen, onClick }) => {
     return (
-        <>
-            <h1>Accordion</h1>
-            <div className='accordion-main-bx'>
-                <div className='accordion'>
-                    <button onClick={changeState} className='accordion-header' type='button'>
-                        <i>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M19.2675 7.55531L12.9467 1.23365C12.1644 0.453638 11.1047 0.015625 10 0.015625C8.89529 0.015625 7.83564 0.453638 7.05334 1.23365L0.73251 7.55531C0.499531 7.7868 0.314818 8.06223 0.189079 8.36563C0.0633394 8.66904 -0.000925334 8.99439 1.00662e-05 9.32281V17.5036C1.00662e-05 18.1667 0.263402 18.8026 0.732243 19.2714C1.20108 19.7403 1.83697 20.0036 2.50001 20.0036H17.5C18.1631 20.0036 18.7989 19.7403 19.2678 19.2714C19.7366 18.8026 20 18.1667 20 17.5036V9.32281C20.0009 8.99439 19.9367 8.66904 19.8109 8.36563C19.6852 8.06223 19.5005 7.7868 19.2675 7.55531ZM12.5 18.337H7.50001V15.0586C7.50001 14.3956 7.7634 13.7597 8.23224 13.2909C8.70109 12.822 9.33697 12.5586 10 12.5586C10.6631 12.5586 11.2989 12.822 11.7678 13.2909C12.2366 13.7597 12.5 14.3956 12.5 15.0586V18.337ZM18.3333 17.5036C18.3333 17.7247 18.2455 17.9366 18.0893 18.0929C17.933 18.2492 17.721 18.337 17.5 18.337H14.1667V15.0586C14.1667 13.9536 13.7277 12.8938 12.9463 12.1124C12.1649 11.331 11.1051 10.892 10 10.892C8.89494 10.892 7.83513 11.331 7.05373 12.1124C6.27233 12.8938 5.83334 13.9536 5.83334 15.0586V18.337H2.50001C2.279 18.337 2.06703 18.2492 1.91075 18.0929C1.75447 17.9366 1.66668 17.7247 1.66668 17.5036V9.32281C1.66745 9.10196 1.75517 8.8903 1.91084 8.73365L8.23168 2.41448C8.70143 1.94692 9.33723 1.68443 10 1.68443C10.6628 1.68443 11.2986 1.94692 11.7683 2.41448L18.0892 8.73615C18.2442 8.89219 18.3319 9.10283 18.3333 9.32281V17.5036Z" fill="#1B242C" />
-                            </svg>
-                        </i>
-                        Insert an informative title text here
-                    </button>
-                    {state ? <div className='accordion-body'>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    </div> : null}
-                </div>
-            </div>
-        </>
-
+        <div className="accordion-item">
+        <button className="accordion-header" onClick={onClick}>
+            <i>
+               <img src={HomeIcon}/>
+            </i>
+          <span className="accordion-title">{title}</span>
+          <span className={`accordion-arrow ${isOpen ? 'open' : ''}`}><img src={AccordionArrow}/></span>
+        </button>
+        {isOpen && (
+          <div className="accordion-content">
+            {children}
+          </div>
+        )}
+      </div>
     );
-}
+  };
 
-export default Accordion;
+  const AccordionItem2 = ({ title, children, isOpen, onClick }) => {
+    return (
+        <div className="accordion-item accordion-item-w-bg">
+        <button className="accordion-header" onClick={onClick}>
+            <i>
+               <img src={HomeIcon}/>
+            </i>
+          <span className="accordion-title">{title}</span>
+          <span className={`accordion-arrow ${isOpen ? 'open' : ''}`}><img src={AccordionArrow}/></span>
+        </button>
+        {isOpen && (
+          <div className="accordion-content">
+            {children}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+  const AccordionItem3 = ({ title, children, isOpen, onClick }) => {
+    return (
+        <div className="accordion-item accordion-item-w-border">
+        <button className="accordion-header" onClick={onClick}>
+            <i>
+               <img src={HomeIcon}/>
+            </i>
+          <span className="accordion-title">{title}</span>
+          <span className={`accordion-arrow ${isOpen ? 'open' : ''}`}><img src={AccordionArrow}/></span>
+        </button>
+        {isOpen && (
+          <div className="accordion-content">
+            {children}
+          </div>
+        )}
+      </div>
+    );
+  };
+
+
+  // Accordion component
+const Accordion = () => {
+    const [openIndex, setOpenIndex] = useState(null);
+  
+    const handleClick = (index) => {
+      setOpenIndex(openIndex === index ? null : index);
+    };
+  
+    return (
+      <div>
+        <AccordionItem
+          title="Insert an informative title text here"
+          isOpen={openIndex === 0}
+          onClick={() => handleClick(0)}
+        >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </AccordionItem>
+        <AccordionItem
+          title="Insert an informative title text here"
+          isOpen={openIndex === 1}
+          onClick={() => handleClick(1)}
+        >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </AccordionItem>
+        <AccordionItem
+          title="Insert an informative title text here"
+          isOpen={openIndex === 2}
+          onClick={() => handleClick(2)}
+        >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </AccordionItem>
+        <br/>
+        <AccordionItem2
+          title="Insert an informative title text here"
+          isOpen={openIndex === 3}
+          onClick={() => handleClick(3)}
+        >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </AccordionItem2>
+        <AccordionItem2
+          title="Insert an informative title text here"
+          isOpen={openIndex === 4}
+          onClick={() => handleClick(4)}
+        >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </AccordionItem2>
+        <AccordionItem2
+          title="Insert an informative title text here"
+          isOpen={openIndex === 5}
+          onClick={() => handleClick(5)}
+        >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </AccordionItem2>
+        <br/>
+        <AccordionItem3
+          title="Insert an informative title text here"
+          isOpen={openIndex === 6}
+          onClick={() => handleClick(6)}
+        >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </AccordionItem3>
+        <AccordionItem3
+          title="Insert an informative title text here"
+          isOpen={openIndex === 7}
+          onClick={() => handleClick(7)}
+        >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </AccordionItem3>
+        <AccordionItem3
+          title="Insert an informative title text here"
+          isOpen={openIndex === 8}
+          onClick={() => handleClick(8)}
+        >
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </AccordionItem3>
+      </div>
+    );
+  };
+  
+  export default Accordion;

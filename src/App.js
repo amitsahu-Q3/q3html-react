@@ -23,6 +23,7 @@ import Loader from './component/Loader/Loader.js';
 import Accordion from './component/Accordion/Accordion.js';
 import ProgressBar from './component/ProgressBar/ProgressBar.js';
 import Sidebar from './component/Common/Sidebar.js';
+import Stepper from './component/Stepper/Stepper.js';
 
 
 function App() {
@@ -59,6 +60,7 @@ function App() {
             <Route exact path="/loader" element={  <Loader/>} />
             <Route exact path="/accordion" element={  <Accordion/> } />
             <Route exact path="/progress-bar" element={<ProgressBar/>}/>
+            <Route exact path="/stepper" element={<Stepper/>}/>
         </Routes>
          </div>
     </div>

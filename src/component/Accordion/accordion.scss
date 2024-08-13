@@ -4,31 +4,76 @@
 @use '../../assets/css/border.scss' as *;
 @use '../../assets/css/elevation.scss' as *;
 @use '../../assets/css/color.scss' as *;
-.accordion{
-  margin-bottom: $Spacing-16;
+
+.accordion-item {
+  max-width: 500px;
 }
-.accordion .accordion-header{
-  padding: $Spacing-12 $Spacing-16;
-  background-color: $Neutral-shade-l;
-  width:100%;
-  cursor: pointer;
-  text-align: left;
+
+.accordion-header {
+  border-bottom: $Border-width-1 $Border-Style-Solid #DEE3E7 !important;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  background: #FFF;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
   border: none;
-  border-bottom:$Border-width-1 $Border-Style-Solid $Cool-shade-h;
-  font-weight: $Font-Weight-Medium;
-  font-size: $Font-Size-16;
-  line-height: $Line-height-24;
 }
-.accordion .accordion-header i{
-  margin-right: $Spacing-12;
+.accordion-header i{
+   margin-right: $Spacing-12;
+   width: 20px;
+   height: 20px;
 }
-.accordion .accordion-body{
-  background-color: $Cool-shade-k;
-  padding: $Spacing-12;
-  font-weight: $Font-Weight-Regular;
+.accordion-title {
+  flex: 1;
+}
+
+.accordion-arrow {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+  display: inline-block;
+}
+
+.accordion-arrow.open {
+  transform: rotate(180deg); /* Rotate arrow when item is open */
+}
+
+.accordion-content{
+  background-color: #F5F7F9;
+  padding:  $Spacing-10;
+}
+.accordion-content p{
+  margin: 0;
   font-size: $Font-Size-16;
-  color: $Cool-shade-d;
-  line-height: $Line-height-24;
+  color: #555F6D;
+  line-height: $Line-height-28;
+}
+.accordion-item-w-bg, .accordion-item-w-border{
+  margin-bottom: $Spacing-10;
+}
+.accordion-item-w-bg .accordion-header{
+  background-color: #F5F7F9;
+  border-bottom: 0 !important;
+}
+
+.accordion-item-w-bg .accordion-content{
+  background-color: #FFF;
+}
+
+.accordion-item-w-border .accordion-header{
+  background-color: #F5F7F9;
+  border-radius: $Radius-8;
+  border: $Border-width-1 $Border-Style-Solid #000 !important;
+}
+
+.accordion-item-w-border .accordion-content{
+  background-color: #FFF;
+  border: $Border-width-1 $Border-Style-Solid #000 !important;
+  border-radius: 0 0 $Radius-8 $Radius-8;
+  border-top: 0 !important;
 }

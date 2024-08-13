@@ -67,6 +67,9 @@ function Sidebar() {
                <li>
                    <Link to={"/progress-bar"}>Progress Bar</Link>
                </li>
+               <li>
+                   <Link to={"/stepper"}>Stepper</Link>
+               </li>
            </ul>
         </>
 
