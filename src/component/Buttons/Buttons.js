@@ -1,11 +1,17 @@
 import './buttons.scss';
-import './buttons-layout.scss';
+
 
 
 function Buttons() {
   return (
     <>
-      <h1>Buttons</h1>
+
+
+<div className="common-heading-bx">
+            <h1>Buttons</h1>
+       </div>
+
+      <h1></h1>
       <p>XL - Button</p>
       <div className='Buttons-border-main-bx'>
         <div className='Buttons-border-inner'>

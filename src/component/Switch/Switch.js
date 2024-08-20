@@ -1,11 +1,14 @@
 import './switch.scss';
-import './switch-layout.scss';
+import '../../assets/css/comon.scss';
 
 
 function Switch() {
     return (
         <>
-            <h1>Switch</h1>
+
+            <div className="common-heading-bx">
+             <h1>Switch</h1>
+           </div>
              <div className='tabbar-main-bx'>
                 <div>
                     <p>Main Component - Type 1</p>

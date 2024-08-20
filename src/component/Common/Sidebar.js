@@ -70,6 +70,9 @@ function Sidebar() {
                <li>
                    <Link to={"/stepper"}>Stepper</Link>
                </li>
+               <li>
+                   <Link to={"/date-picker"}>DatePicker</Link>
+               </li>
            </ul>
         </>
 

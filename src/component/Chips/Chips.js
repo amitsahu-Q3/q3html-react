@@ -1,12 +1,16 @@
 import './chips.scss';
-import './chips-layout.scss';
+
 
 
 function Chips() {
   return (
     <>
-      <h1>Chips</h1>
-      <p>Main Component</p>
+      <div className="common-heading-bx">
+            <h1>Chips</h1>
+            <p>Main Component</p>
+       </div>
+
+     
       <div className='chips-border-main-bx'>
         <button type='button' class="chips border-radius-192">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

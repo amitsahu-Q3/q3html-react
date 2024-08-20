@@ -1,12 +1,15 @@
 import './checkbox.scss';
-import './checkbox-layout.scss';
+import '../../assets/css/comon.scss';
 
 
 function Checkbox() {
   return (
     <>
-      <h1>Checkbox</h1>
-      <p>Main Component</p>
+
+<div className="common-heading-bx">
+            <h1>Checkbox</h1>
+            <p>Main Component</p>
+       </div>
       <div className='check-border-main-bx'>
           <div>
                <p>Solid Sharp</p>

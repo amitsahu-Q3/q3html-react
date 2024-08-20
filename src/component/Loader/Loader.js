@@ -1,11 +1,14 @@
 import './loader.scss';
-import './loader-layout.scss';
+import '../../assets/css/comon.scss';
 
 
 function Loader() {
   return (
     <>
-      <h1>Loader</h1>
+      
+      <div className="common-heading-bx">
+            <h1>Loader</h1>
+           </div>
       <p>Style 1</p>
       <div className='loader-main-bx'>
           <div className='loader-outer loader-xxl'>

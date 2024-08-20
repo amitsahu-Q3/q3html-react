@@ -1,11 +1,14 @@
 import './radio.scss';
-import './radio-layout.scss';
+import '../../assets/css/comon.scss';
 
 
 function Radio() {
   return (
     <>
-      <h1>Radio</h1>
+
+         <div className="common-heading-bx">
+            <h1>Radio</h1>
+           </div>
       <p>Main Component - Sharp</p>
       <div className='check-border-main-bx'>
         <label className="radio-button-container">One

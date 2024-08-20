@@ -1,11 +1,15 @@
 import './tabbar.scss';
-import './tabbar-layout.scss';
+import '../../assets/css/comon.scss';
 
 
 function Tabbar() {
     return (
         <>
-            <h1>Tabbar</h1>
+
+           <div className="common-heading-bx">
+             <h1>Tabbar</h1>
+           </div>
+           
             <div className='tabbar-main-bx'>
                 <div>
                     <p>Type 1 - Sharp</p>

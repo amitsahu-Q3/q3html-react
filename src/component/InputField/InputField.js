@@ -1,11 +1,14 @@
 import './Inputfield.scss';
-import './Inputfield-layout.scss';
+import '../../assets/css/comon.scss';
 
 
 function InputField() {
      return (
           <>
-               <h1>Input Field</h1>
+        <div className="common-heading-bx">
+            <h1>Input Field</h1>
+       </div>
+               <h1></h1>
                <div className='input-border-main-bx'>
                     <p>Input Solid</p>
                     <div className='form-field'>

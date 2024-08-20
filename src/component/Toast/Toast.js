@@ -1,12 +1,15 @@
 import './toast.scss';
-import './toast-layout.scss';
+import '../../assets/css/comon.scss';
 
 
 function Toast() {
     return (
         <>
-            <h1>Toast</h1>
-            <p>Type 1 - Filled</p>
+
+                  <div className="common-heading-bx">
+                    <h1>Toast</h1>
+                 </div>
+            <h1></h1>
             <div className="toast-main-bx">
                 <div className='toast-default toast-success'>
                     <i>

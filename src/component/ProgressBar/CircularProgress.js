@@ -1,5 +1,4 @@
 import './progressbar.scss';
-import './progress-bar-layout.scss';
 import CheckCricle from '../../assets/images/check_circle.svg'
 
 function CircularProgress() {

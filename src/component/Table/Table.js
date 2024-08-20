@@ -1,13 +1,14 @@
 import './table.scss';
-import './table-layout.scss';
+import '../../assets/css/comon.scss';
 import AvaterImg from "../../assets/images/avatar-img.png";
 
 
 function Table() {
     return (
         <>
+            <div className="common-heading-bx">
             <h1>Table</h1>
-
+           </div>
             <div className='table-responsive'>
                 <table cellPadding="0" cellSpacing="0" class="table">
                     <thead>

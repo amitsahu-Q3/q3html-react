@@ -1,5 +1,5 @@
 import './accordion.scss';
-import './accordion-layout.scss';
+import '../../assets/css/comon.scss';
 import AccordionArrow from '../../assets/images/angle-small-down.svg';
 import HomeIcon from '../../assets/images/home.svg';
 import React, { useState } from 'react';
@@ -45,6 +45,7 @@ const AccordionItem = ({ title, children, isOpen, onClick }) => {
 
   const AccordionItem3 = ({ title, children, isOpen, onClick }) => {
     return (
+    <>
         <div className="accordion-item accordion-item-w-border">
         <button className="accordion-header" onClick={onClick}>
             <i>
@@ -57,8 +58,10 @@ const AccordionItem = ({ title, children, isOpen, onClick }) => {
           <div className="accordion-content">
             {children}
           </div>
+         
         )}
       </div>
+      </>
     );
   };
 
@@ -73,6 +76,9 @@ const Accordion = () => {
   
     return (
       <div>
+      <div className="common-heading-bx">
+      <h1>Accordion</h1>
+     </div>
         <AccordionItem
           title="Insert an informative title text here"
           isOpen={openIndex === 0}

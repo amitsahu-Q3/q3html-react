@@ -15,12 +15,12 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  background: $Neutral-shade-l;
-  padding: $Spacing-10;
+  background: #FFF;
+  padding: 10px;
   text-align: left;
   cursor: pointer;
   outline: none;
-  font-size: $Font-Size-16;
+  font-size: 16px;
   border: none;
 }
 .accordion-header i{
@@ -33,9 +33,9 @@
 }
 
 .accordion-arrow {
-  font-size: $Font-Size-18;
+  font-size: 18px;
   transition: transform 0.3s ease;
-  margin-left: $Spacing-10;
+  margin-left: 10px;
   display: inline-block;
 }
 
@@ -50,30 +50,30 @@
 .accordion-content p{
   margin: 0;
   font-size: $Font-Size-16;
-  color: $Cool-shade-d;
+  color: #555F6D;
   line-height: $Line-height-28;
 }
 .accordion-item-w-bg, .accordion-item-w-border{
   margin-bottom: $Spacing-10;
 }
 .accordion-item-w-bg .accordion-header{
-  background-color: $Cool-shade-k;
+  background-color: #F5F7F9;
   border-bottom: 0 !important;
 }
 
 .accordion-item-w-bg .accordion-content{
-  background-color: $Neutral-shade-l;
+  background-color: #FFF;
 }
 
 .accordion-item-w-border .accordion-header{
-  background-color: $Cool-shade-k;
+  background-color: #F5F7F9;
   border-radius: $Radius-8;
-  border: $Border-width-1 $Border-Style-Solid $black-color !important;
+  border: $Border-width-1 $Border-Style-Solid #000 !important;
 }
 
 .accordion-item-w-border .accordion-content{
   background-color: #FFF;
-  border: $Border-width-1 $Border-Style-Solid $black-color !important;
+  border: $Border-width-1 $Border-Style-Solid #000 !important;
   border-radius: 0 0 $Radius-8 $Radius-8;
   border-top: 0 !important;
 }

@@ -1,12 +1,15 @@
 import './fileupload.scss';
-import './fileupload-layout.scss';
+import '../../assets/css/comon.scss';
 
 
 function FileUpload() {
   return (
     <>
-      <h1>File Upload</h1>
-      <p>Main Component</p>
+
+<div className="common-heading-bx">
+            <h1>File Upload</h1>
+            <p>Main Component</p>
+       </div>
       <div className='upload-border-main-bx'>
           <div className='file-upload'>
           <div className='upload-bx'>

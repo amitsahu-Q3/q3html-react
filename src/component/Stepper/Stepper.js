@@ -1,5 +1,4 @@
 import './stepper.scss';
-import './stepper-layout.scss';
 import CheckCricle from '../../assets/images/check_circle.svg';
 import CheckCricleBlue from '../../assets/images/check_circle-blue.svg';
 import AddCardIcon from '../../assets/images/add-card-icon.svg';
@@ -7,8 +6,9 @@ import AddCardIcon from '../../assets/images/add-card-icon.svg';
 function Stepper() {
   return (
     <>
-      <h1>Stepper</h1>
-
+      <div className="common-heading-bx">
+            <h1>Stepper</h1>
+           </div>
       <div className='steps-outer'>
         <div className='step-bx step-completed'>
           <span>

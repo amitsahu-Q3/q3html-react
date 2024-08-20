@@ -24,6 +24,7 @@ import Accordion from './component/Accordion/Accordion.js';
 import ProgressBar from './component/ProgressBar/ProgressBar.js';
 import Sidebar from './component/Common/Sidebar.js';
 import Stepper from './component/Stepper/Stepper.js';
+import Datepicker from './component/DatePicker/DatePicker.js';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
             <Route exact path="/accordion" element={  <Accordion/> } />
             <Route exact path="/progress-bar" element={<ProgressBar/>}/>
             <Route exact path="/stepper" element={<Stepper/>}/>
+            <Route exact path="/date-picker" element={<Datepicker/>}/>
         </Routes>
          </div>
     </div>

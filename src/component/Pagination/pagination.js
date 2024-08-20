@@ -1,14 +1,12 @@
 import './pagination.scss';
-import './pagination-layout.scss';
-
+import '../../assets/css/comon.scss';
 
 function Pagination() {
   return (
     <>
-      <h1>Pagination</h1>
-        <div className='pagination'>
-            
-        </div>
+      <div className="common-heading-bx">
+            <h1>Pagination</h1>
+       </div>
         <nav>
         <ul class="pagination">
           <li class="page-item"> 

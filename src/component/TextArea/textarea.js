@@ -1,11 +1,13 @@
 import './textarea.scss';
-import './textarea-layout.scss';
+import '../../assets/css/comon.scss';
 
 
 function TextArea() {
      return (
           <>
-               <h1>Text Area</h1>
+                <div className="common-heading-bx">
+                    <h1>Text Area</h1>
+                 </div>
                <div className='input-border-main-bx'>
                     <div className='form-field'>
                          <label for="">Label</label>

@@ -1,5 +1,4 @@
 import './progressbar.scss';
-import './progress-bar-layout.scss';
 import CheckCricle from '../../assets/images/check_circle.svg';
 import CrossMark from '../../assets/images/cross-mark.svg';
 import Uparrow from '../../assets/images/up-arrow.svg'
